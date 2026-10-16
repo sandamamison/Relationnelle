@@ -10,3 +10,10 @@ FROM commande
 JOIN ligne_commande ON commande.id_commande = ligne_commande.id_commande
 JOIN plat ON ligne_commande.id_plat = plat.id_plat
 GROUP BY commande.id_commande;
+
+SELECT commande.id_commande,CASE WHEN clients.nom IS NULL THEN 'client de passage'
+ELSE clients.nom
+END AS nom_client
+FROM commande
+LEFT JOIN clients ON commande.id_client = clients.id_client
+;
