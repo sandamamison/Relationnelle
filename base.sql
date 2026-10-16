@@ -1,0 +1,7 @@
+-- Active: 1792143561546@@127.0.0.1@5432@sakafo
+CREATE DATABASE sakafo;
+
+CREATE TABLE plat(
+    id SERIAL PRIMARY KEY,
+    plat
+)
